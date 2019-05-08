@@ -1,0 +1,35 @@
+#设置端口号
+server:
+  port: 9001
+
+  ###设置项目名称（项目名称不能使用下划线）用于以后spring cloud服务器查找
+spring:
+  application:
+    name: huahua-base
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.97.117.83:3306/huahua_base?characterEncoding=utf8
+    username: root
+    password: 123456
+
+    #jpa的配置
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+  ###mybatis映射路径
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+
+
+#日志级别
+logging:
+  level:
+    root: info
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka/
+  instance:
+    prefer-ip-address: true

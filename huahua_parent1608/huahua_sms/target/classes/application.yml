@@ -1,0 +1,15 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: huahua-sms
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+
+
+api:
+  send:
+    appCode: 0608b45d53a7411383bddfbabaa51c96
+    tplid: TP1710262
